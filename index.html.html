@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyenthia Braddy | Custom Carpentry & Woodwork in Marion, SC 29571</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Playfair Display for warm craftsmanship aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        stone: {
+                            950: '#0c0a09',
+                        },
+                        amber: {
+                            450: '#f59e0b',
+                            550: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-950 text-stone-100 font-sans antialiased selection:bg-amber-500 selection:text-stone-950 overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-stone-950/85 backdrop-blur-md border-b border-stone-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="#" onclick="navigateTo('home'); return false;" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-stone-950 transition-all duration-300">
+                        <i class="fa-solid fa-hammer text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl font-bold tracking-wide text-white block leading-none">Cyenthia Braddy</span>
+                        <span class="text-[11px] uppercase tracking-widest text-amber-400 font-medium">Custom Carpentry • SC 29571</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-7">
+                    <button onclick="navigateTo('home')" class="nav-link text-sm font-medium text-amber-400 transition-colors" data-page="home">Home</button>
+                    <button onclick="navigateTo('about')" class="nav-link text-sm font-medium text-stone-300 hover:text-amber-400 transition-colors" data-page="about">About</button>
+                    <a href="#services" onclick="navigateTo('home')" class="text-sm font-medium text-stone-300 hover:text-amber-400 transition-colors">Services</a>
+                    <a href="#pricing" onclick="navigateTo('home')" class="text-sm font-medium text-stone-300 hover:text-amber-400 transition-colors">Rates</a>
+                    <button onclick="navigateTo('contact')" class="nav-link text-sm font-medium text-stone-300 hover:text-amber-400 transition-colors" data-page="contact">Contact</button>
+                </nav>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:+18434309617" class="text-sm font-medium text-stone-300 hover:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-amber-400 text-xs"></i>
+                        +1 843-430-9617
+                    </a>
+                    <button onclick="navigateTo('contact')" class="px-5 py-2.5 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold text-sm transition-all shadow-lg shadow-amber-500/20">
+                        Get Free Quote
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-3 rounded-xl text-stone-300 hover:text-white hover:bg-stone-800/70 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-900 border-b border-stone-800 px-4 pt-2 pb-6 space-y-2">
+            <button onclick="navigateTo('home')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">Home</button>
+            <button onclick="navigateTo('about')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">About Cyenthia</button>
+            <a href="#services" onclick="navigateTo('home')" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">Carpentry Services</a>
+            <a href="#pricing" onclick="navigateTo('home')" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">Rates ($20/ft & $25/ft)</a>
+            <button onclick="navigateTo('contact')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-amber-400">Contact & Quote</button>
+            <div class="pt-3 border-t border-stone-800 flex flex-col gap-3">
+                <a href="tel:+18434309617" class="w-full py-3 rounded-xl bg-stone-800 text-center text-stone-200 font-medium flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-amber-400"></i> Call +1 843-430-9617
+                </a>
+                <button onclick="navigateTo('contact')" class="w-full py-3 rounded-xl bg-amber-500 text-stone-950 text-center font-bold shadow-lg">
+                    Request Estimate
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN HOME VIEW -->
+    <main id="page-home" class="page-view">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden">
+            <!-- Ambient Warm Glow Background -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-amber-600/15 blur-[130px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Text Column -->
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-medium mb-6">
+                            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                            Serving Marion, SC 29571 & Nearby Communities
+                        </div>
+
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                            Handcrafted Custom <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600">TV Panels, Beds & Woodwork</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                            Hi, I'm <strong class="text-white font-semibold">Cyenthia Braddy</strong>. Based on Spruce St in Marion, SC, I design and build durable custom wooden TV wall panels starting at <strong class="text-amber-400">$20/foot</strong>, custom handcrafted beds starting at <strong class="text-amber-400">$25/foot</strong>, and tailored carpentry projects across <strong class="text-white">SC 29571</strong> and nearby areas.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                            <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-base transition-all shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2">
+                                <span>Request a Custom Quote</span>
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </a>
+                            <a href="tel:+18434309617" class="w-full sm:w-auto px-8 py-4 rounded-full bg-stone-900 hover:bg-stone-800 border border-stone-700 text-white font-semibold text-base transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-phone text-amber-400"></i>
+                                <span>+1 843-430-9617</span>
+                            </a>
+                        </div>
+
+                        <!-- Quick Key Highlights -->
+                        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-stone-800/80 max-w-lg mx-auto lg:mx-0">
+                            <div>
+                                <p class="text-xl sm:text-2xl font-bold text-white">$20<span class="text-sm font-normal text-stone-400">/ft</span></p>
+                                <p class="text-xs text-stone-400 mt-0.5">TV Panels Start</p>
+                            </div>
+                            <div>
+                                <p class="text-xl sm:text-2xl font-bold text-amber-400">$25<span class="text-sm font-normal text-stone-400">/ft</span></p>
+                                <p class="text-xs text-stone-400 mt-0.5">Custom Beds Start</p>
+                            </div>
+                            <div>
+                                <p class="text-xl sm:text-2xl font-bold text-white">29571</p>
+                                <p class="text-xs text-stone-400 mt-0.5">Marion & Nearby</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual Card Column -->
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-3xl overflow-hidden bg-stone-900 border border-stone-800 shadow-2xl group">
+                            <!-- High-res Carpentry Image with Fallback -->
+                            <img 
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/800x950/1c1917/f59e0b?text=Cyenthia+Braddy+Custom+Carpentry';"
+                                alt="Custom Wooden TV Wall Panel and Carpentry Craftsmanship" 
+                                class="w-full h-[420px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
+                            >
+                            <!-- Gradient Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent"></div>
+                            
+                            <!-- Floating Info Badge inside Card -->
+                            <div class="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-stone-900/90 backdrop-blur-md border border-stone-700/70">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs uppercase tracking-wider text-amber-400 font-semibold">Local Master Carpenter</p>
+                                        <h2 class="text-lg font-bold text-white">Cyenthia Braddy</h2>
+                                        <p class="text-xs text-stone-400 mt-0.5">631 Spruce St, Marion, SC 29571</p>
+                                    </div>
+                                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+                                        <i class="fa-solid fa-ruler-combined text-xl"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Craftsmanship & Local Commitment Section -->
+        <section class="py-20 bg-stone-900/50 border-y border-stone-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Why Choose Cyenthia Braddy</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Precision Woodwork Built to Last in Marion, SC</h2>
+                    <p class="text-stone-300 text-base sm:text-lg leading-relaxed">
+                        Located at <strong class="text-white">631 Spruce St, Marion, SC 29571</strong>, we take pride in transforming living rooms, bedrooms, and homes across Marion and surrounding SC 29571 neighborhoods with custom-measured carpentry.
+                    </p>
+                </div>
+
+                <!-- 3 Feature Pillars -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 hover:border-amber-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 text-xl">
+                            <i class="fa-solid fa-ruler-horizontal"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Fair Per-Foot Pricing</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            Transparent linear-foot rates starting at <strong class="text-white">$20/foot</strong> for TV feature panels and <strong class="text-white">$25/foot</strong> for custom beds, plus honest quotes for specialty builds.
+                        </p>
+                    </div>
+
+                    <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 hover:border-amber-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Marion & Nearby SC 29571</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            We serve homeowners throughout <strong class="text-white">Marion, SC 29571</strong> and nearby surrounding communities with reliable on-site measuring, delivery, and installation.
+                        </p>
+                    </div>
+
+                    <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 hover:border-amber-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 text-xl">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Solid Timber & Clean Finishes</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            Every joint, slat, headboard, and floating console is crafted with sturdy lumber, hidden cable routing, and smooth stains or paint-ready finishes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carpentry Services Section -->
+        <section id="services" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Custom Woodwork</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Our Carpentry Services</h2>
+                    </div>
+                    <p class="text-stone-400 text-sm max-w-md">
+                        Custom-built to your exact wall dimensions, bed size, and room style in Marion, SC 29571 & nearby areas.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="p-6 rounded-3xl bg-stone-900/80 border border-stone-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <div class="w-11 h-11 rounded-xl bg-stone-800 text-amber-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-tv text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Custom TV Panels</h3>
+                            <p class="text-stone-400 text-sm leading-relaxed">
+                                Modern slatted wood walls, fluted accent panels, floating media ledges, and concealed wire channels tailored to your screen size.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-stone-800/80 text-xs text-amber-400 font-semibold">
+                            Starts from $20 / Foot
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-6 rounded-3xl bg-stone-900/80 border border-stone-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <div class="w-11 h-11 rounded-xl bg-stone-800 text-amber-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-bed text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Handcrafted Wood Beds</h3>
+                            <p class="text-stone-400 text-sm leading-relaxed">
+                                Heavy-duty solid wood bed frames, statement paneled headboards, platform beds, and storage drawers built for Twin through King sizes.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-stone-800/80 text-xs text-amber-400 font-semibold">
+                            Starts from $25 / Foot
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-6 rounded-3xl bg-stone-900/80 border border-stone-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <div class="w-11 h-11 rounded-xl bg-stone-800 text-amber-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-layer-group text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Shelving & Accent Walls</h3>
+                            <p class="text-stone-400 text-sm leading-relaxed">
+                                Floating shelves, custom closet organizers, wainscoting, board-and-batten feature walls, and fireplace mantels.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-stone-800/80 text-xs text-amber-400 font-semibold">
+                            Priced based on work & design
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="p-6 rounded-3xl bg-stone-900/80 border border-stone-800 flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <div class="w-11 h-11 rounded-xl bg-stone-800 text-amber-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Repairs & Custom Builds</h3>
+                            <p class="text-stone-400 text-sm leading-relaxed">
+                                Trim & molding installation, door hanging, custom wooden benches, cabinetry touch-ups, and general residential carpentry.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-stone-800/80 text-xs text-amber-400 font-semibold">
+                            Priced based on work & materials
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transparent Pricing & Interactive Footage Estimator Section -->
+        <section id="pricing" class="py-20 bg-stone-900/50 border-y border-stone-800/80">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Clear & Honest Rates</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Carpentry Pricing & Estimator</h2>
+                    <p class="text-stone-400 mt-2 text-sm sm:text-base">Estimate your custom TV panel or bed build by linear footage in Marion, SC 29571 & nearby areas.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+                    <!-- Base Rate Card -->
+                    <div class="md:col-span-6 p-8 rounded-3xl bg-gradient-to-b from-stone-900 to-stone-950 border border-amber-500/40 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full bg-amber-500/15 text-amber-400 text-xs font-semibold mb-4">
+                                Standard Per-Foot Starting Rates
+                            </div>
+                            
+                            <div class="space-y-4 mb-6">
+                                <div class="p-4 rounded-2xl bg-stone-950/80 border border-stone-800 flex items-center justify-between">
+                                    <div>
+                                        <span class="text-white font-bold block">Custom TV Panels</span>
+                                        <span class="text-xs text-stone-400">Wall paneling & media mounts</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-2xl font-bold text-amber-400">$20</span>
+                                        <span class="text-xs text-stone-400 block">/ foot starting</span>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 rounded-2xl bg-stone-950/80 border border-stone-800 flex items-center justify-between">
+                                    <div>
+                                        <span class="text-white font-bold block">Custom Wood Beds</span>
+                                        <span class="text-xs text-stone-400">Frames & custom headboards</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-2xl font-bold text-amber-400">$25</span>
+                                        <span class="text-xs text-stone-400 block">/ foot starting</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="space-y-3 text-sm text-stone-300 mb-8">
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                    <span>Other carpentry services quoted fairly based on work</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                    <span>Serving Marion, SC <strong>29571</strong> & nearby communities</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                    <span>Exact measurements & design consultation included</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="#booking" class="w-full py-3.5 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-center text-sm transition-colors">
+                            Schedule Your Measurement
+                        </a>
+                    </div>
+
+                    <!-- Interactive Footage Estimator -->
+                    <div class="md:col-span-6 p-8 rounded-3xl bg-stone-900 border border-stone-800 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Quick Project Estimator</h3>
+                            <p class="text-stone-400 text-sm mb-6">Choose your project type and linear footage to calculate a starting estimate.</p>
+
+                            <!-- Project Type Selector -->
+                            <div class="mb-5">
+                                <label for="calc-type" class="block text-sm font-medium text-stone-300 mb-2">Project Type</label>
+                                <select id="calc-type" class="w-full px-4 py-3 rounded-xl bg-stone-950 border border-stone-800 text-white text-sm focus:outline-none focus:border-amber-500">
+                                    <option value="20" selected>Custom TV Panel ($20 / foot starting)</option>
+                                    <option value="25">Custom Wood Bed ($25 / foot starting)</option>
+                                </select>
+                            </div>
+
+                            <!-- Linear Footage Slider -->
+                            <div class="mb-6">
+                                <div class="flex justify-between items-center mb-2">
+                                    <label for="feet-slider" class="text-sm font-medium text-stone-300">Estimated Length / Size</label>
+                                    <span id="feet-display" class="px-3 py-1 rounded-lg bg-stone-800 text-amber-400 font-bold text-sm">8 Feet</span>
+                                </div>
+                                <input 
+                                    id="feet-slider" 
+                                    type="range" 
+                                    min="4" 
+                                    max="24" 
+                                    value="8" 
+                                    class="w-full h-2 bg-stone-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                                >
+                                <div class="flex justify-between text-xs text-stone-500 mt-1.5">
+                                    <span>4 ft</span>
+                                    <span>8 ft</span>
+                                    <span>12 ft</span>
+                                    <span>16 ft</span>
+                                    <span>20 ft</span>
+                                    <span>24 ft</span>
+                                </div>
+                            </div>
+
+                            <!-- LED / Custom Finish Toggle -->
+                            <div class="p-4 rounded-2xl bg-stone-950/70 border border-stone-800 mb-6">
+                                <label class="flex items-center justify-between cursor-pointer">
+                                    <div>
+                                        <span class="text-sm font-medium text-white block">Custom Stain / LED Accent Prep</span>
+                                        <span class="text-xs text-stone-400">Optional upgraded finish package (+$60)</span>
+                                    </div>
+                                    <input id="finish-toggle" type="checkbox" class="w-5 h-5 rounded accent-amber-500 cursor-pointer">
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Estimated Total Box -->
+                        <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-amber-400 font-semibold block">Estimated Starting Cost</span>
+                                <span class="text-xs text-stone-400">Final quote based on exact dimensions</span>
+                            </div>
+                            <div class="text-right">
+                                <span id="total-estimate" class="text-3xl font-bold text-white">$160</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking & Contact Section -->
+        <section id="booking" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left Contact & Service Area Details -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Direct Contact</span>
+                            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Get a Quote from Cyenthia Braddy</h2>
+                            <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+                                Ready to upgrade your living room with a custom TV panel, order a solid wood bed, or discuss another carpentry project? Call directly or send your project details below. We serve <strong class="text-white">Marion, SC 29571</strong> and nearby areas.
+                            </p>
+                        </div>
+
+                        <!-- Contact Cards -->
+                        <div class="space-y-4">
+                            <!-- Phone -->
+                            <div class="p-5 rounded-2xl bg-stone-900 border border-stone-800 flex items-center justify-between gap-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-phone text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-stone-400">Direct Phone / Text</p>
+                                        <a href="tel:+18434309617" class="text-base sm:text-lg font-bold text-white hover:text-amber-400 transition-colors">
+                                            +1 843-430-9617
+                                        </a>
+                                    </div>
+                                </div>
+                                <button onclick="copyPhoneNumber()" class="p-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white text-xs font-medium transition-colors" title="Copy Phone Number">
+                                    <i class="fa-regular fa-copy"></i> Copy
+                                </button>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="p-5 rounded-2xl bg-stone-900 border border-stone-800 flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-map-pin text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-stone-400">Workshop & Service Hub</p>
+                                    <p class="text-base font-bold text-white mt-0.5">Cyenthia Braddy</p>
+                                    <p class="text-sm text-stone-300">631 Spruce St</p>
+                                    <p class="text-sm text-stone-300">Marion, SC 29571</p>
+                                    <p class="text-xs text-amber-400 font-semibold mt-1 uppercase tracking-wider">United States</p>
+                                </div>
+                            </div>
+
+                            <!-- Service Area Notice -->
+                            <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-3.5">
+                                <i class="fa-solid fa-circle-info text-amber-400 mt-1"></i>
+                                <div class="text-xs sm:text-sm text-stone-200 leading-relaxed">
+                                    <strong class="text-amber-300">Service Coverage & Rates:</strong> Serving <strong class="text-white">Marion, SC 29571 & nearby surrounding areas</strong>. TV panels start at <strong class="text-white">$20/foot</strong>, beds start at <strong class="text-white">$25/foot</strong>, and additional carpentry work is priced based on project scope.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Quote Request Form -->
+                    <div class="lg:col-span-7">
+                        <div class="p-6 sm:p-10 rounded-3xl bg-stone-900 border border-stone-800 shadow-2xl">
+                            <h3 class="text-2xl font-bold text-white mb-2">Request a Project Estimate</h3>
+                            <p class="text-stone-400 text-sm mb-6">Tell us about your project in Marion, SC 29571 or nearby areas and we'll follow up promptly.</p>
+
+                            <form id="quote-form" class="space-y-5">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Your Name *</label>
+                                        <input type="text" id="client-name" required placeholder="e.g., Marcus Johnson" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors">
+                                    </div>
+                                    <div>
+                                        <label for="client-phone" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Phone Number *</label>
+                                        <input type="tel" id="client-phone" required placeholder="(843) 555-0148" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="project-service" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Carpentry Service *</label>
+                                        <select id="project-service" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                            <option value="Custom TV Panel (Starts at $20/ft)">Custom TV Panel (Starts at $20/ft)</option>
+                                            <option value="Custom Wood Bed (Starts at $25/ft)">Custom Wood Bed (Starts at $25/ft)</option>
+                                            <option value="Wall Shelving / Accent Wall">Wall Shelving / Accent Wall (Based on work)</option>
+                                            <option value="Trim, Doors & Custom Woodwork">Trim, Doors & Custom Woodwork (Based on work)</option>
+                                            <option value="Other Carpentry Service">Other Carpentry Service (Custom Quote)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="project-zip" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Your ZIP Code (SC 29571 & Nearby) *</label>
+                                        <input type="text" id="project-zip" value="29571" required maxlength="5" placeholder="29571" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                        <p id="zip-note" class="hidden text-xs text-amber-400 mt-1.5">
+                                            <i class="fa-solid fa-circle-info mr-1"></i> We serve SC 29571 and nearby surrounding areas—we will confirm travel distance!
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="approx-feet" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Approximate Footage / Dimensions</label>
+                                        <input type="text" id="approx-feet" placeholder="e.g., 8 feet wide x 7 feet tall, or Queen bed" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors">
+                                    </div>
+                                    <div>
+                                        <label for="preferred-date" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Preferred Consultation Date</label>
+                                        <input type="date" id="preferred-date" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="project-notes" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Project Details & Location</label>
+                                    <textarea id="project-notes" rows="3" placeholder="Share your street/neighborhood near Marion SC 29571, wood finish preferences, or details about other carpentry work..." class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-base transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Submit Quote Request</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- DEDICATED ABOUT PAGE VIEW -->
+    <section id="page-about" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 font-medium mb-6">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </button>
+                <span class="block text-xs font-bold uppercase tracking-widest text-amber-400">Craftsmanship & Story</span>
+                <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2 mb-6">About Cyenthia Braddy</h1>
+                <p class="text-lg text-stone-300 leading-relaxed">
+                    Based at <strong class="text-white">631 Spruce St, Marion, SC 29571</strong>, I am a dedicated local carpenter specializing in custom-built TV wall panels, solid wood beds, and tailored residential woodworking for homeowners across Marion and nearby communities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
+                <div class="lg:col-span-5">
+                    <div class="rounded-3xl overflow-hidden border border-stone-800 bg-stone-900 shadow-xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/700x800/1c1917/f59e0b?text=Cyenthia+Braddy+Woodworking';"
+                            alt="Woodworking Workshop Craftsmanship" 
+                            class="w-full h-96 object-cover"
+                        >
+                        <div class="p-6">
+                            <h2 class="text-lg font-bold text-white">Local Marion Carpenter</h2>
+                            <p class="text-sm text-stone-400 mt-1">631 Spruce St, Marion, SC 29571</p>
+                            <div class="mt-4 pt-4 border-t border-stone-800 space-y-1 text-xs">
+                                <div class="flex justify-between">
+                                    <span class="text-stone-400">TV Panels:</span>
+                                    <span class="text-amber-400 font-bold">From $20 / foot</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-stone-400">Custom Beds:</span>
+                                    <span class="text-amber-400 font-bold">From $25 / foot</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-stone-300 leading-relaxed">
+                    <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 space-y-4">
+                        <h3 class="text-xl font-bold text-white">Built Around Your Home & Budget</h3>
+                        <p class="text-sm sm:text-base">
+                            Store-bought furniture rarely fits your exact wall proportions or holds up over years of daily use. By working directly with homeowners in <strong class="text-white">Marion, SC 29571 and nearby areas</strong>, every piece is measured on-site and constructed with care.
+                        </p>
+                        <p class="text-sm sm:text-base">
+                            Whether you want a floor-to-ceiling slatted TV feature wall starting at <strong class="text-white">$20/foot</strong>, a sturdy custom headboard and bed frame starting at <strong class="text-white">$25/foot</strong>, or custom shelving and home trim work priced fairly based on the scope of work, you receive honest communication from initial sketch to final installation.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-6 rounded-2xl bg-stone-900/70 border border-stone-800">
+                            <i class="fa-solid fa-tv text-amber-400 text-xl mb-3"></i>
+                            <h4 class="font-bold text-white mb-1">Entertainment Centers</h4>
+                            <p class="text-xs text-stone-400 leading-relaxed">Clean wood paneling, hidden TV power & HDMI routing, and floating shelves crafted to fit your living space.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-stone-900/70 border border-stone-800">
+                            <i class="fa-solid fa-bed text-amber-400 text-xl mb-3"></i>
+                            <h4 class="font-bold text-white mb-1">Bedroom Carpentry</h4>
+                            <p class="text-xs text-stone-400 leading-relaxed">Squeak-free solid wood bed frames, tall accent headboards, and matching nightstands built to last.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="navigateTo('contact')" class="px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition-all shadow-lg">
+                            Request Your Custom Woodwork Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED CONTACT PAGE VIEW -->
+    <section id="page-contact" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-amber-400">Get In Touch</span>
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">Contact Cyenthia Braddy</h1>
+            <p class="text-stone-300 text-base sm:text-lg max-w-2xl mb-12">
+                Have measurements ready or want to schedule an estimate in <strong class="text-white">Marion, SC 29571 or nearby areas</strong>? Call directly or send a message below.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Address Card -->
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Workshop Address</h3>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        Cyenthia Braddy<br>
+                        631 Spruce St<br>
+                        Marion, SC 29571<br>
+                        UNITED STATES
+                    </p>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Phone & Text</h3>
+                        <a href="tel:+18434309617" class="text-lg font-bold text-amber-400 hover:underline block mb-1">
+                            +1 843-430-9617
+                        </a>
+                        <p class="text-xs text-stone-400">Monday – Saturday • 8:00 AM – 6:00 PM EST</p>
+                    </div>
+                    <button onclick="copyPhoneNumber()" class="mt-4 w-full py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-xs font-semibold text-white transition-colors">
+                        <i class="fa-regular fa-copy mr-1"></i> Copy Phone Number
+                    </button>
+                </div>
+
+                <!-- Rates & Area Card -->
+                <div class="p-7 rounded-3xl bg-stone-900 border border-stone-800">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Rates & Service Zone</h3>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        <strong class="text-white">TV Panels:</strong> From $20 / foot<br>
+                        <strong class="text-white">Beds:</strong> From $25 / foot<br>
+                        <strong class="text-white">Other Work:</strong> Based on work<br>
+                        <span class="text-xs text-amber-400 block mt-2">Serving Marion, SC 29571 & nearby</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Direct Contact Message Form -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-stone-900 border border-stone-800">
+                <h2 class="text-2xl font-bold text-white mb-2">Send a Project Inquiry</h2>
+                <p class="text-sm text-stone-400 mb-6">For TV panels ($20/ft+), beds ($25/ft+), and custom carpentry in Marion, SC 29571 & nearby areas.</p>
+                <form id="contact-page-form" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Full Name *</label>
+                            <input type="text" required placeholder="Your Name" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Phone or Email *</label>
+                            <input type="text" required placeholder="+1 (843) 000-0000" class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Project ZIP Code (29571 & Nearby) *</label>
+                            <input type="text" id="contact-zip" value="29571" maxlength="5" required class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Service Needed</label>
+                            <select class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500">
+                                <option>Custom TV Panel ($20/ft starting)</option>
+                                <option>Custom Wood Bed ($25/ft starting)</option>
+                                <option>Other Carpentry Work (Custom Quote)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Project Measurements & Details *</label>
+                        <textarea rows="4" required placeholder="Tell Cyenthia about your wall/bed measurements, location near Marion SC 29571, and desired style..." class="w-full px-4 py-3.5 rounded-xl bg-stone-950 border border-stone-800 text-white focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+                    <button type="submit" class="px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition-all shadow-lg">
+                        Send Message to Cyenthia
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED PRIVACY POLICY PAGE VIEW -->
+    <section id="page-privacy" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-amber-400">Legal Information</span>
+            <h1 class="font-serif text-4xl font-bold text-white mt-2 mb-2">Privacy Policy</h1>
+            <p class="text-xs text-stone-400 mb-8">Last Updated: November 2026 • Cyenthia Braddy Carpentry (Marion, SC 29571)</p>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-stone-900 border border-stone-800 space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">1. Information We Collect</h2>
+                    <p>
+                        When you submit a quote request or contact inquiry on this website, Cyenthia Braddy collects only the details you voluntarily provide, such as your name, phone number, email address, project address/ZIP code (to confirm service in <strong class="text-white">Marion, SC 29571 and nearby areas</strong>), and woodwork dimensions.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">2. How We Use Your Information</h2>
+                    <p>Your information is used strictly for:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1 text-stone-300">
+                        <li>Providing accurate estimates for TV panels (starting at $20/foot), beds (starting at $25/foot), and custom carpentry projects.</li>
+                        <li>Scheduling on-site measurements, deliveries, and installations in Marion, SC 29571 and surrounding communities.</li>
+                        <li>Communicating updates regarding your lumber, stain/finish options, and project timeline.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">3. Data Confidentiality</h2>
+                    <p>
+                        We value your trust and privacy. Cyenthia Braddy never sells, rents, or shares your personal contact details or home address with third-party marketers. Your information is kept confidential and used solely to complete your requested carpentry services.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">4. Contact Regarding Privacy</h2>
+                    <p>
+                        If you wish to review, update, or remove your inquiry information, please contact Cyenthia Braddy directly:<br>
+                        <strong class="text-white">Address:</strong> 631 Spruce St, Marion, SC 29571, UNITED STATES<br>
+                        <strong class="text-white">Phone:</strong> <a href="tel:+18434309617" class="text-amber-400 hover:underline">+1 843-430-9617</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED TERMS OF SERVICE PAGE VIEW -->
+    <section id="page-terms" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-amber-400">Service Guidelines</span>
+            <h1 class="font-serif text-4xl font-bold text-white mt-2 mb-2">Terms of Service</h1>
+            <p class="text-xs text-stone-400 mb-8">Effective Date: November 2026 • Cyenthia Braddy Custom Carpentry</p>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-stone-900 border border-stone-800 space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">1. Service Area (Marion, SC 29571 & Nearby)</h2>
+                    <p>
+                        Custom carpentry, on-site measurements, and installation services are offered within <strong class="text-white">Marion, SC 29571</strong> and nearby surrounding communities. Projects outside the immediate area may be reviewed on a case-by-case basis.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">2. Starting Rates & Custom Quotes</h2>
+                    <p>
+                        Standard starting rates are <strong class="text-white">$20 per linear foot</strong> for custom TV panels and <strong class="text-white">$25 per linear foot</strong> for custom wooden beds. All other carpentry services (shelving, trim, repairs, and specialty builds) are quoted individually based on the scope of work, lumber selection, and hardware required. Final pricing is confirmed in writing after exact measurements are taken.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">3. Materials, Deposits & Custom Orders</h2>
+                    <p>
+                        Because custom TV panels and beds are cut and built to your specific room dimensions, a materials deposit may be required before lumber purchasing and fabrication begin. Natural wood grain and stain absorption may vary slightly from sample swatches.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">4. Installation Access & Rescheduling</h2>
+                    <p>
+                        Clients agree to provide clear workspace access to the installation wall or bedroom on the scheduled delivery date. If you need to reschedule an appointment, please call or text <a href="tel:+18434309617" class="text-amber-400 hover:underline">+1 843-430-9617</a> at least 48 hours in advance.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">5. Business Contact Information</h2>
+                    <p>
+                        <strong class="text-white">Cyenthia Braddy</strong><br>
+                        631 Spruce St, Marion, SC 29571, UNITED STATES<br>
+                        Phone: +1 843-430-9617
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 border-t border-stone-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-stone-900">
+                <div class="text-center md:text-left">
+                    <span class="font-serif text-xl font-bold text-white block">Cyenthia Braddy</span>
+                    <p class="text-xs text-stone-400 mt-1">
+                        631 Spruce St, Marion, SC 29571, UNITED STATES • <a href="tel:+18434309617" class="text-amber-400 hover:underline">+1 843-430-9617</a>
+                    </p>
+                </div>
+
+                <!-- Footer Page Links -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-stone-400">
+                    <button onclick="navigateTo('home')" class="hover:text-amber-400 transition-colors">Home</button>
+                    <button onclick="navigateTo('about')" class="hover:text-amber-400 transition-colors">About</button>
+                    <button onclick="navigateTo('contact')" class="hover:text-amber-400 transition-colors">Contact</button>
+                    <button onclick="navigateTo('privacy')" class="hover:text-amber-400 transition-colors">Privacy Policy</button>
+                    <button onclick="navigateTo('terms')" class="hover:text-amber-400 transition-colors">Terms of Service</button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 text-center sm:text-left">
+                <p>Custom Carpentry in Marion, SC 29571 & Nearby • TV Panels from $20/ft • Beds from $25/ft</p>
+                <p>&copy; <span id="current-year"></span> Cyenthia Braddy Carpentry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Notification Modal / Toast (Replaces alert) -->
+    <div id="notification-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-stone-950/80 backdrop-blur-sm">
+        <div class="max-w-md w-full p-6 sm:p-8 rounded-3xl bg-stone-900 border border-stone-700 shadow-2xl text-center transform transition-all">
+            <div id="modal-icon-container" class="w-14 h-14 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i id="modal-icon" class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="modal-title" class="text-xl font-bold text-white mb-2">Quote Request Sent!</h3>
+            <p id="modal-message" class="text-sm text-stone-300 leading-relaxed mb-6">
+                Thank you for reaching out! Cyenthia Braddy will review your project details and call you shortly.
+            </p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition-colors">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Single-Page Multi-View Navigation Router (Home, About, Contact, Privacy, Terms)
+        function navigateTo(pageName) {
+            const views = document.querySelectorAll('.page-view');
+            views.forEach(view => view.classList.add('hidden'));
+
+            const targetView = document.getElementById(`page-${pageName}`);
+            if (targetView) {
+                targetView.classList.remove('hidden');
+            }
+
+            // Update active state on desktop nav buttons
+            document.querySelectorAll('.nav-link').forEach(btn => {
+                if (btn.dataset.page === pageName) {
+                    btn.classList.remove('text-stone-300');
+                    btn.classList.add('text-amber-400');
+                } else {
+                    btn.classList.remove('text-amber-400');
+                    btn.classList.add('text-stone-300');
+                }
+            });
+
+            // Close mobile menu if open
+            const mobileMenuEl = document.getElementById('mobile-menu');
+            if (mobileMenuEl && !mobileMenuEl.classList.contains('hidden')) {
+                mobileMenuEl.classList.add('hidden');
+            }
+
+            // Smooth scroll to top when switching views
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking an anchor link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Per-Foot Rate Calculator ($20/ft TV Panels, $25/ft Beds)
+        const calcType = document.getElementById('calc-type');
+        const feetSlider = document.getElementById('feet-slider');
+        const feetDisplay = document.getElementById('feet-display');
+        const finishToggle = document.getElementById('finish-toggle');
+        const totalEstimate = document.getElementById('total-estimate');
+
+        function updateEstimate() {
+            const ratePerFoot = parseInt(calcType.value, 10);
+            const feet = parseInt(feetSlider.value, 10);
+            const finishFee = finishToggle.checked ? 60 : 0;
+            const total = (feet * ratePerFoot) + finishFee;
+
+            feetDisplay.textContent = `${feet} Feet`;
+            totalEstimate.textContent = `$${total.toLocaleString()}`;
+        }
+
+        calcType.addEventListener('change', updateEstimate);
+        feetSlider.addEventListener('input', updateEstimate);
+        finishToggle.addEventListener('change', updateEstimate);
+
+        // Helpful ZIP Code Note for Marion SC 29571 & Nearby Areas
+        const zipInput = document.getElementById('project-zip');
+        const zipNote = document.getElementById('zip-note');
+
+        zipInput.addEventListener('input', () => {
+            const val = zipInput.value.trim();
+            if (val.length === 5 && val !== '29571') {
+                zipNote.classList.remove('hidden');
+            } else {
+                zipNote.classList.add('hidden');
+            }
+        });
+
+        // Copy Phone Number using fallback execCommand for iframe compatibility
+        function copyPhoneNumber() {
+            const phoneText = '+1 843-430-9617';
+            const tempInput = document.createElement('textarea');
+            tempInput.value = phoneText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showModal(
+                    'Phone Number Copied',
+                    'Cyenthia Braddy\'s number (+1 843-430-9617) has been copied to your clipboard.',
+                    'fa-copy',
+                    false
+                );
+            } catch (err) {
+                showModal(
+                    'Direct Phone Number',
+                    'Call or text Cyenthia Braddy directly at +1 843-430-9617.',
+                    'fa-phone',
+                    false
+                );
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Custom Modal Helpers
+        const modal = document.getElementById('notification-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        const modalIcon = document.getElementById('modal-icon');
+        const modalIconContainer = document.getElementById('modal-icon-container');
+
+        function showModal(title, message, iconClass = 'fa-check', isWarning = false) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modalIcon.className = `fa-solid ${iconClass}`;
+            
+            if (isWarning) {
+                modalIconContainer.className = 'w-14 h-14 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center mx-auto mb-4 text-2xl';
+            } else {
+                modalIconContainer.className = 'w-14 h-14 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4 text-2xl';
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Quote Request Form Submission Handler
+        const quoteForm = document.getElementById('quote-form');
+        quoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('client-name').value.trim();
+            const zip = document.getElementById('project-zip').value.trim();
+            const service = document.getElementById('project-service').value;
+
+            showModal(
+                'Estimate Request Sent!',
+                `Thank you, ${name}! Your request for ${service} (ZIP ${zip}) is ready. Cyenthia Braddy will follow up shortly—or call +1 843-430-9617 to discuss measurements.`,
+                'fa-hammer',
+                false
+            );
+            
+            quoteForm.reset();
+            document.getElementById('project-zip').value = '29571';
+            zipNote.classList.add('hidden');
+        });
+
+        // Contact Page Form Submission Handler
+        const contactPageForm = document.getElementById('contact-page-form');
+        if (contactPageForm) {
+            contactPageForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                showModal(
+                    'Message Sent to Cyenthia!',
+                    'Thank you for contacting Cyenthia Braddy Carpentry. Expect a reply soon—or call +1 843-430-9617 directly.',
+                    'fa-envelope-circle-check',
+                    false
+                );
+                contactPageForm.reset();
+                document.getElementById('contact-zip').value = '29571';
+            });
+        }
+    </script>
+</body>
+</html>
